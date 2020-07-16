@@ -1,0 +1,41 @@
+天猫自定义技能服务端（项目名：skill_server）
+    环境：
+        ubuntu 18+
+
+    1、安装python3
+        #yum install python3
+    2、安装flask
+        #python3 -m pip install flask
+    3、注册天猫账户，登陆到开放平台
+        1、登陆：https://www.aligenie.com/
+        2、访问智能应用平台：https://iap.aligenie.com/home
+        3、创建技能：https://iap.aligenie.com/console/hybird/list
+            技能名称：喊话的内容
+            技能调用词：同技能名称
+            其它：随便填写，点击下一步，进入技能详情页
+
+            选择《语音交互模型创建》菜单
+                创建意图：
+                    意图名称：同技能名称
+                    意图标识：同技能名称
+                    设为默认意图：是
+                回复逻辑：
+                    点开 默认逻辑WEBHOOK，点击详情
+                    下载认证文件///非常重要
+                    把下载的认证文件放到skill_server项目文件夹下的aligenie目录下，切记不可以改名。
+                    网页不能关。。不能关。。。不能关
+                    运行服务端程序：
+                        #cd skill_server
+                        #python3 run.py
+                    回到网页：
+                        填写URL：http://域名/skill/
+                        提交成功后即可
+
+    4、修改代码处理自定义技能的响应内容
+        略
+
+
+
+
+
+    4、
